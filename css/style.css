@@ -32,9 +32,11 @@ header {
 }
 
 main {
-   padding-left: 150px; /* Espaço para o menu lateral */
-    padding-right: 150px; /* Espaço para o menu lateral */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
+
 
 .pesquisa {
     display: flex;
@@ -82,18 +84,25 @@ main {
     
 }
 
-.container{
+.container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Define duas colunas */
-    gap: 10px; /* Espaço entre os blocos */
-
+    grid-template-columns: 1fr; /* Apenas uma coluna */
+    gap: 20px; /* Espaçamento entre os itens */
 }
+
+
 
 .item{
 
     padding: 20px;
     text-align: center;
 
+}
+
+.item img {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
 }
 
 
@@ -167,5 +176,37 @@ main {
     color:#aaa;
     margin-bottom:0;
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .duvidas-frequentes {
+        font-size: 16px;
+    }
+}
+
+/* Melhorando a experiência em telas muito pequenas */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Força os itens a ficarem em apenas uma coluna */
+    }
+
+    .pesquisa img {
+        width: 80px;
+        height: auto;
+    }
+}
+
   
 
