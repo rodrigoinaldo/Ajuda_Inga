@@ -22,8 +22,8 @@ body {
 }
 
 header {
-    /* background-color: rgb(47, 47, 108);
-    background-image: linear-gradient(to right, rgb(47, 47, 108) , rgb(208, 127, 21)); */
+    background-color: rgb(47, 47, 108);
+    background-image: linear-gradient(to right, rgb(80, 80, 163) , rgb(208, 127, 21));
 
     background-color: rgb(40, 163, 163);
     color: white;
@@ -73,16 +73,63 @@ main {
     border-width: 1px;
     border-radius: 15px;
     padding: 10px;
+    
 }
 
-.opcaos{
+details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+  
+summary {
+    font-weight: bold;
+    position: relative;
+    list-style: none;
+    padding-right: 25px;
+}
+  
+summary::marker {
+    display: none;
+}
+  
+summary::after {
+    content: "▶";
+    position: absolute;
+    
+    right: 0;
+    transition: transform 0.3s;
+}
+  
+details[open] summary::after {
+    transform: rotate(90deg); /* Gira a seta ao abrir */
+}
+  
+details:hover {
+    background-color: #f0f0f0;
+}
+  
+.opcaos {
+    padding: 10px 0 0 0;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* .opcaos{
     border-style: solid;
     border-color: rgb(163, 163, 178);
     border-width: 1px;
     border-radius: 15px;
     padding: 10px;
     
-}
+} */
 
 .container {
     display: grid;
@@ -112,9 +159,9 @@ main {
 
 .footer-basic {
     padding:40px 0;
-    background-color: rgb(40, 163, 163);
-    /* background-color: rgb(47, 47, 108);
-    background-image: linear-gradient(to right, rgb(47, 47, 108) , rgb(208, 127, 21)); */
+    /* background-color: rgb(40, 163, 163); */
+    background-color: rgb(47, 47, 108);
+    background-image: linear-gradient(to right, rgb(80, 80, 163) , rgb(208, 127, 21));
     color:#4b4c4d;
     position: fixed;
     bottom: 0;
@@ -137,7 +184,7 @@ main {
 }
   
 .footer-basic ul a {
-    color:inherit;
+    color: white;
     text-decoration:none;
     opacity:0.8;
 }
