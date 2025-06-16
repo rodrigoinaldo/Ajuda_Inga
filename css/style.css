@@ -158,17 +158,14 @@ details:hover {
 /* Footer Styles */
 
 .footer-basic {
-    padding:40px 0;
-    /* background-color: rgb(40, 163, 163); */
+    padding: 40px 0;
     background-color: rgb(47, 47, 108);
-    background-image: linear-gradient(to right, rgb(80, 80, 163) , rgb(208, 127, 21));
-    color:#4b4c4d;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    background-image: linear-gradient(to right, rgb(80, 80, 163), rgb(208, 127, 21));
+    color: #4b4c4d;
+    position: relative; /* Alterado de fixed para relative */
     width: 100%;
-    
 }
+
   
 .footer-basic ul {
     padding:0;
