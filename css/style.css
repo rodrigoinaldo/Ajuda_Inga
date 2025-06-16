@@ -227,8 +227,20 @@ details:hover {
     }
 
     .pesquisa {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: auto auto auto; /* Três colunas para organizar os elementos */
+        gap: 20px; /* Espaçamento entre os itens */
         align-items: center;
+        justify-content: center;
+    }
+    
+    .pesquisa div {
+        text-align: center;
+    }
+    
+    .pesquisa img {
+        width: 100px; /* Ajuste conforme necessário */
+        height: auto;
     }
 
     .duvidas-frequentes {
@@ -245,7 +257,7 @@ details:hover {
     .container {
         grid-template-columns: 1fr; /* Força os itens a ficarem em apenas uma coluna */
     }
-    
+
     .pesquisa {
         display: grid;
         grid-template-columns: auto auto auto; /* Três colunas para organizar os elementos */
@@ -259,15 +271,9 @@ details:hover {
     }
     
     .pesquisa img {
-        width: 150px; /* Ajuste conforme necessário */
+        width: 10px; /* Ajuste conforme necessário */
         height: auto;
     }
-    
-    
-
-
-
-
 }
 
   
