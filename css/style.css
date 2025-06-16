@@ -86,8 +86,8 @@ main {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr; /* Apenas uma coluna */
-    gap: 20px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(2, 1fr); /* Define duas colunas */
+    gap: 10px; /* Espaço entre os blocos */
 }
 
 
@@ -206,6 +206,7 @@ main {
         width: 80px;
         height: auto;
     }
+
 }
 
   
